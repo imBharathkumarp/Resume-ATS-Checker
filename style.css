@@ -1,59 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  }
-  
-  label {
-    display: block;
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-  input[type="file"],
-  textarea,
-  button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  button {
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  #results {
-    margin-top: 30px;
-    background: #e9f5ff;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  /* General Reset and Fonts */
+/* General Reset and Fonts */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -68,89 +13,143 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px;
 }
 
-/* Container Card */
+/* Glassmorphism Container */
 .container {
-  background: #fff;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  padding: 2.5rem;
+  max-width: 700px;
   width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Heading */
 .container h1 {
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
   color: #1a1a2e;
-  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Labels */
 label {
   display: block;
   text-align: left;
-  margin: 1rem 0 0.5rem;
-  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
   color: #333;
 }
 
-/* Input and Textarea */
+/* File input and Textarea */
 input[type="file"],
 textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   border-radius: 12px;
   font-size: 1rem;
-  background-color: #fafafa;
-  resize: vertical;
-  transition: all 0.3s ease-in-out;
+  background-color: #f9f9f9;
+  transition: 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 input[type="file"]:hover,
 textarea:focus {
-  border-color: #005eff;
-  background-color: #eef4ff;
+  border-color: #007bff;
+  background-color: #eef6ff;
 }
 
 /* Analyze Button */
 #analyzeBtn {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   width: 100%;
-  padding: 0.75rem;
-  background-color: #007bff;
+  padding: 0.8rem;
+  background: linear-gradient(to right, #007bff, #0056d2);
   color: white;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #analyzeBtn:hover {
-  background-color: #0056d2;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
 }
 
-/* Result Section */
+/* Results Section */
 #results {
   margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
+  padding: 1.2rem;
+  background-color: #e9f5ff;
+  border-radius: 12px;
   text-align: left;
 }
 
+#results h2 {
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+#results p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hidden Utility */
 .hidden {
   display: none;
 }
 
-#results h2 {
-  color: #333;
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  #analyzeBtn {
+    font-size: 0.95rem;
+  }
+}
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  opacity: 0.8;
 }
 
-#results p {
-  margin: 0.5rem 0;
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
