@@ -53,3 +53,104 @@ body {
     display: none;
   }
   
+  /* General Reset and Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(135deg, #f0f4ff, #dbe6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Card */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.container h1 {
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-size: 2rem;
+}
+
+/* Labels */
+label {
+  display: block;
+  text-align: left;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input and Textarea */
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  resize: vertical;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover,
+textarea:focus {
+  border-color: #005eff;
+  background-color: #eef4ff;
+}
+
+/* Analyze Button */
+#analyzeBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#analyzeBtn:hover {
+  background-color: #0056d2;
+}
+
+/* Result Section */
+#results {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+#results h2 {
+  color: #333;
+}
+
+#results p {
+  margin: 0.5rem 0;
+}
