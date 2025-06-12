@@ -25,3 +25,4 @@ It supports `.pdf` and `.docx` files and provides a keyword match score along wi
 - No frameworks, no build tools — just open and run.
 
 ---
+
