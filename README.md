@@ -1,5 +1,7 @@
 # 📄 Resume ATS Checker
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/091300af-2998-482b-98fb-39c46df68551/deploy-status)](https://app.netlify.com/sites/resumeatschecker/deploys)
+
 **Resume ATS Checker** is a simple, browser-based tool that allows job seekers to upload their resumes and compare them against a job description to see how well they match — just like an Applicant Tracking System (ATS) would.
 
 It supports `.pdf` and `.docx` files and provides a keyword match score along with feedback to help improve your resume for better ATS compatibility.
